@@ -10,10 +10,12 @@ services:
     depends_on:
       - 'mongo'
   mongo:
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: username
+      MONGO_INITDB_ROOT_PASSWORD: password
     image:  'mongo:latest'
     container_name: 'mongo'
     ports:
       - '27100:27017'
-      - '28100:28017'
     volumes:
       - './mongo:/data/db'
