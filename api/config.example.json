@@ -1,0 +1,6 @@
+{
+  "token": "TOKENHERE",
+  "port" : ":8080",
+  "db_port": ":27017",
+  "db_name": "flag_game"
+}
