@@ -18,6 +18,9 @@ type Game struct {
 }
 
 func UpdateGame(gameID int64, playerID int, playerName string, cmd string) (string, string) {
+  if len(cmd) == 0 {
+    return "",""
+  }
   if cmd[0] != '/' {
     return "",""
   }
