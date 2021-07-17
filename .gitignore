@@ -1,4 +1,5 @@
 api/config.json
 my_personal_notes.txt
 mongo/*
+.env
 *.swp
