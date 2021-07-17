@@ -6,5 +6,5 @@ TODO:
 - Add missing flags.
 - Create /help command that will explain the game rules.
 
-Flags from Wordometer
+*Flags from Wordometer*<br>
 https://www.worldometers.info/geography/flags-of-the-world/
