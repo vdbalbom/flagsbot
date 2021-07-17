@@ -16,7 +16,8 @@ type Flag struct {
 // Read json file
 func DrawFlag() Flag {
   flag := Flag{}
-  i := rand.Intn(6)+1
+  files,_ := ioutil.ReadDir("flags/")
+  i := rand.Intn(len(files))
   jsonFile, _ := os.Open("flags/" + strconv.Itoa(i) + ".json")
   defer jsonFile.Close()
   byteValue, _ := ioutil.ReadAll(jsonFile)
