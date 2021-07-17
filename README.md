@@ -5,3 +5,6 @@ TODO:
 - Accept uppercase and accents in flags names.
 - Add missing flags.
 - Create /help command that will explain the game rules.
+
+Flags from Wordometer
+https://www.worldometers.info/geography/flags-of-the-world/
