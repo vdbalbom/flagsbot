@@ -165,7 +165,7 @@ func CheckAnswer(gameID int64, playerID int, aws string) (string, string) {
       return "OPS! something went wrong1...", "reply"
     }
   }
-  return "Wrong...", "reply"
+  return "", ""
 }
 
 func EndGame(id int64) (string, string) {
