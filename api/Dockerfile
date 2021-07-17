@@ -1,8 +1,9 @@
-FROM golang:1.8
+FROM golang:1.16
 
 WORKDIR /go/src/app
 COPY . .
 
+RUN go mod init
 RUN go get -d -v ./...
 RUN go install -v ./...
 

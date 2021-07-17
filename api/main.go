@@ -58,6 +58,6 @@ func Handler(res http.ResponseWriter, req *http.Request) {
 // The main function starts server
 func main() {
   fmt.Println("start")
-  port := GetPort()
+  port := ":8080"
   http.ListenAndServe(port, http.HandlerFunc(Handler))
 }

@@ -5,6 +5,7 @@ import (
   "bytes"
   "errors"
   "net/http"
+  "os"
 )
 
 // Req body used here to send message method:
@@ -44,8 +45,7 @@ func SendMessage(chatID int64, msg string) error {
   }
 
   // Send a request with your token
-  // The method GetToken() is in config.go file
-  res, err := http.Post("https://api.telegram.org/bot" + GetToken() + "/sendMessage", "application/json", bytes.NewBuffer(reqBytes))
+  res, err := http.Post("https://api.telegram.org/" + os.Getenv("BOT_TOKEN") + "/sendMessage", "application/json", bytes.NewBuffer(reqBytes))
 
   if err != nil {
     return err
@@ -72,8 +72,7 @@ func SendReply(chatID int64, messageID int64, msg string) error {
   }
 
   // Send a request with your token
-  // The method GetToken() is in config.go file
-  res, err := http.Post("https://api.telegram.org/bot" + GetToken() + "/sendMessage", "application/json", bytes.NewBuffer(reqBytes))
+  res, err := http.Post("https://api.telegram.org/" + os.Getenv("BOT_TOKEN") + "/sendMessage", "application/json", bytes.NewBuffer(reqBytes))
 
   if err != nil {
     return err
@@ -99,8 +98,7 @@ func SendPhoto(chatID int64, photo string) error {
   }
 
   // Send a request with your token
-  // The method GetToken() is in config.go file
-  res, err := http.Post("https://api.telegram.org/bot" + GetToken() + "/sendPhoto", "application/json", bytes.NewBuffer(reqBytes))
+  res, err := http.Post("https://api.telegram.org/" + os.Getenv("BOT_TOKEN") + "/sendPhoto", "application/json", bytes.NewBuffer(reqBytes))
 
   if err != nil {
     return err
