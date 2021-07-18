@@ -23,18 +23,6 @@ type webhookReqBody struct {
   } `json:"message"`
 }
 
-// Chat struct 
-// https://core.telegram.org/bots/api#chat
-// Used here: get chat method result
-type Chat struct {
-  ID int64 `json:"id"`
-  Title string `json:"title,omitempty"`
-  InviteLink string `json:"invite_link,omitempty"`
-  Permissions struct {
-    CanInvite bool `json:"can_invite_users,omitempty"`
-  } `json:"permissions,omitempty"`
-}
-
 // This handler is called everytime telegram sends a webhook event
 func Handler(res http.ResponseWriter, req *http.Request) {
   // Decode the JSON response body
