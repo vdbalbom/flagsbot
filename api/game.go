@@ -25,6 +25,8 @@ func UpdateGame(gameID int64, playerID int, playerName string, cmd string) (stri
     return "",""
   }
   switch cmd {
+    case "/help":
+      return Help(gameID)
     case "/startflaggame":
       return CreateGame(gameID)
     case "/iamin":
@@ -46,6 +48,16 @@ func GetGameStatus(id int64) string {
     return game.Status
   }
   return "not created"
+}
+
+func Help(id int64) (string, string) {
+  return "/startflaggame : start game\n
+/iamin : tell you want to participate\n
+/everybodyisin : start to play\n
+/nextflag : move to next flag after someone guess correctly\n
+/endflaggame : finish the game\n
+/country name : make a guess",
+"message"
 }
 
 func CreateGame(id int64) (string, string) {
