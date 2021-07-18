@@ -4,7 +4,6 @@
 TODO:
 - Accept uppercase and accents in flags names.
 - Add missing flags.
-- Create /help command that will explain the game rules.
 - If there is no username, then use name+surname for player
 
 *Flags from Wordometer*<br>
