@@ -51,13 +51,7 @@ func GetGameStatus(id int64) string {
 }
 
 func Help(id int64) (string, string) {
-  return "/startflaggame : start game\n
-/iamin : tell you want to participate\n
-/everybodyisin : start to play\n
-/nextflag : move to next flag after someone guess correctly\n
-/endflaggame : finish the game\n
-/country name : make a guess",
-"message"
+  return "/startflaggame : start game\n/iamin : tell you want to participate\n/everybodyisin : start to play\n/nextflag : move to next flag after someone guess correctly\n/endflaggame : finish the game\n/country name : make a guess","message"
 }
 
 func CreateGame(id int64) (string, string) {
